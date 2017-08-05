@@ -11,13 +11,6 @@ var bot = new Twit({
 
 
 function dailyTweeter() {
-  console.log({
-    consumer_key: process.env.CODEDIGGERBOT_CONSUMER_KEY,
-    consumer_secret: process.env.CODEDIGGERBOT_CONSUMER_SECRET,
-    access_token: process.env.CODEDIGGERBOT_ACCESS_TOKEN,
-    access_token_secret: process.env.CODEDIGGERBOT_ACCESS_TOKEN_SECRET,
-    timeout_ms: 60*1000
-  });
   bot.get('search/tweets', {
     q: 'angular4 OR reactjs OR nodejs OR rxjs OR javascript',
     result_type: 'recent' /*result_type:'popular'*/,
