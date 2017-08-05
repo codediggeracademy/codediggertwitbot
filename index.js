@@ -37,4 +37,4 @@ function dailyTweeter() {
 
 setInterval(function(){
   dailyTweeter();
-}, 60*60*1000);
+}, 60*1000);
