@@ -10,7 +10,7 @@ var bot = new Twit({
 });
 
 
-function dailyTweeter() {
+function hourlyTweeter() {
   bot.get('search/tweets', {
     q: 'angular4 OR reactjs OR nodejs OR rxjs OR javascript',
     result_type: 'recent' /*result_type:'popular'*/,
@@ -36,5 +36,5 @@ function dailyTweeter() {
 
 
 setInterval(function(){
-  dailyTweeter();
-}, 60*60*1000);
+  hourlyTweeter();
+}, 4*60*60*1000);
